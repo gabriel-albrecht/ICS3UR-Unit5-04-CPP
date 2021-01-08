@@ -45,7 +45,7 @@ main() {
             volume = CalculateVolume(radiusFromUser, heightFromUser);
 
             if (radiusFromUser <= 0 || heightFromUser <= 0) {
-                std::cout << "Invalid input" << std::endl;
+                std::cout << "Invalid input\n" << std::endl;
             } else {
                 // output
                 std::cout << "The volume is " << volume <<
