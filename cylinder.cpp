@@ -53,7 +53,7 @@ main() {
                 break;
             }
         } catch (std::invalid_argument) {
-            std::cout << "\nYou entered an invalid key.\nTry again.\n"
+            std::cout << "You entered an invalid key.\nTry again.\n"
             << std::endl;
         }
     }
