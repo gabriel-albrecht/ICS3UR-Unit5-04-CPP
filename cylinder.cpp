@@ -8,10 +8,10 @@
 #include <string>
 #include <cmath>
 
-int CalculateVolume(float radius, float height) {
+double CalculateVolume(float radius, float height) {
     // calculate area
-    float cylinderVolume;
-    std::cout.precision(5);
+    double cylinderVolume;
+    std::cout.precision(4);
 
     // process
     cylinderVolume = M_PI * pow(radius, 2.0) * height;
@@ -25,35 +25,33 @@ main() {
 
     while (true) {
         try {
-            float volume;
+            double volume;
             float radiusFromUser;
             float heightFromUser;
             std::string radiusString;
             std::string heightString;
-            std::cout.precision(5);
-    
+
             // input
             std::cout << "Enter the radius of a cylinder (cm): ";
             std::cin >> radiusString;
             std::cout << "Enter the height of a cylinder (cm): ";
             std::cin >> heightString;
             std::cout << std::endl;
-    
+
             radiusFromUser = std::stoi(radiusString);
             heightFromUser = std::stoi(heightString);
-    
+
             // call functions
             volume = CalculateVolume(radiusFromUser, heightFromUser);
 
-            if (radiusFromUser <= 0 or heightFromUser <= 0) {
+            if (radiusFromUser <= 0 || heightFromUser <= 0) {
                 std::cout << "Invalid input" << std::endl;
             } else {
                 // output
-                std::cout << "The volume is " << volume << " cm³"
-                << std::endl;
+                std::cout << "The volume is " << volume <<
+                " cm³" << std::endl;
                 break;
             }
-
         } catch (std::invalid_argument) {
             std::cout << "\nYou entered an invalid key.\nTry again.\n"
             << std::endl;
